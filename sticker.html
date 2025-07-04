@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sticker Friends App</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .main-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff4d6d;
+      margin-bottom: 2rem;
+    }
+    .category-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .category-card {
+      text-align: center;
+      background: #fff;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 180px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+    .category-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 3px solid #ffb3c6;
+    }
+    .category-card p {
+      font-size: 1.1rem;
+      color: #ff4d6d;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    .album {
+      display: none;
+      margin-top: 2rem;
+    }
+    .album.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .album-title {
+      color: #ff4d6d;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .back-button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background: #e04363;
+    }
+    .sticker-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .card {
+      background: #ffe6eb;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.15s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      max-height: 200px;
+      object-fit: cover;
+      border: 2px dashed #ffb3c6;
+    }
+    .card p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title">Bitch Club Stickers</h1>
+
+    <!-- Main Menu -->
+    <div id="main-menu" class="category-grid">
+      <div class="category-card" data-album="haitem">
+        <img src="stickers/haitem.jpg" alt="Haitem" />
+        <p>Haitem</p>
+      </div>
+      <div class="category-card" data-album="razielle">
+        <img src="stickers/razielle.png" alt="Razielle" />
+        <p>Razielle</p>
+      </div>
+      <div class="category-card" data-album="natalia">
+        <img src="stickers/natalia.png" alt="Natalia" />
+        <p>Natalia</p>
+      </div>
+      <div class="category-card" data-album="sophia">
+        <img src="stickers/phia.jpg" alt="Sophia" />
+        <p>Sophia</p>
+      </div>
+    </div>
+
+    <!-- Albums -->
+
+    <!-- Haitem Album -->
+    <div id="haitem" class="album">
+      <button class="back-button">← Back to Menu</button>
+      <h2 class="album-title"> Haitem's Sticker Album</h2>
+      <div class="sticker-grid">
+        <div class="card">
+          <img src="stickers/haitem1.png" alt="Sticker 1" />
+          <p><strong>When:</strong> you realize how much u gonna pay</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem2.png" alt="Sticker 2" />
+          <p><strong>When:</strong> Just won a debate </p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem3.png" alt="Sticker 3" />
+          <p><strong>When:</strong> You saw your results</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem4.png" alt="Sticker 4" />
+          <p><strong>When:</strong> you eye contact with her and she smiles</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem5.png" alt="Sticker 5" />
+          <p><strong>When:</strong> Overthink</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem6.png" alt="Sticker 6" />
+          <p><strong>When:</strong> someone lying to you and you know it</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem7.png" alt="Sticker 7" />
+          <p><strong>When:</strong> strong baby</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem8.png" alt="Sticker 8" />
+          <p><strong>When:</strong> opened camera by mistake</p>
+        </div>
+        <div class="card">
+          <img src="stickers/haitem9.png" alt="Sticker 9" />
+          <p><strong>When:</strong> yo wtf not meee </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Razielle Album -->
+    <div id="razielle" class="album">
+      <button class="back-button">← Back to Menu</button>
+      <h2 class="album-title"> Razielle's Sticker Album</h2>
+      <div class="sticker-grid">
+        <div class="card">
+          <img src="stickers/razielle1.png" alt="Sticker 1" />
+          <p><strong>When:</strong> you see your ex</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle2.png" alt="Sticker 2" />
+          <p><strong>When:</strong> you want food and try to convince the others</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle3.png" alt="Sticker 3" />
+          <p><strong>When:</strong> mad but still cute</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle4.png" alt="Sticker 4" />
+          <p><strong>When:</strong> shitting and natalia watching you</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle5.png" alt="Sticker 5" />
+          <p><strong>When:</strong> Mememememememmemme</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle6.png" alt="Sticker 6" />
+          <p><strong>When:</strong> they blame you for something you didn't do</p>
+        </div>
+        <div class="card">
+          <img src="stickers/stickers/razielle7.png" alt="Sticker 7" />
+          <p><strong>When:</strong> he's loyal and treats you well</p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle8.png" alt="Sticker 8" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/razielle9.png" alt="Sticker 9" />
+          <p><strong>When:</strong> </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Natalia Album -->
+    <div id="natalia" class="album">
+      <button class="back-button">← Back to Menu</button>
+      <h2 class="album-title"> Natalia's Sticker Album</h2>
+      <div class="sticker-grid">
+        <div class="card">
+          <img src="stickers/natalia1.png" alt="Sticker 1" />
+          <p><strong>When:</strong> Someone tells a bad joke </p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia2.png" alt="Sticker 2" />
+          <p><strong>When:</strong> he forgets about your date</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia3.png" alt="Sticker 3" />
+          <p><strong>When:</strong> razi is feeding you</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia4.png" alt="Sticker 4" />
+          <p><strong>When:</strong> Emmmmmmmm</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia5.png" alt="Sticker 5" />
+          <p><strong>When:</strong> Coffee</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia6.png" alt="Sticker 6" />
+          <p><strong>When:</strong> WTf ?</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia7.png" alt="Sticker 7" />
+          <p><strong>When:</strong> Oops! 😳</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia8.png" alt="Sticker 8" />
+          <p><strong>When:</strong> you see boobs</p>
+        </div>
+        <div class="card">
+          <img src="stickers/natalia9.png" alt="Sticker 9" />
+          <p><strong>When:</strong> I'll eat you</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sophia Album -->
+    <div id="sophia" class="album">
+      <button class="back-button">← Back to Menu</button>
+      <h2 class="album-title"> Sophia's Sticker Album</h2>
+      <div class="sticker-grid">
+        <div class="card">
+          <img src="stickers/sophia1.png" alt="Sticker 1" />
+          <p><strong>When:</strong> I didn't do it</p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia2.png" alt="Sticker 2" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia3.png" alt="Sticker 3" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia4.png" alt="Sticker 4" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia5.png" alt="Sticker 5" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia6.png" alt="Sticker 6" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia7.png" alt="Sticker 7" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia8.png" alt="Sticker 8" />
+          <p><strong>When:</strong> </p>
+        </div>
+        <div class="card">
+          <img src="stickers/sophia9.png" alt="Sticker 9" />
+          <p><strong>When:</strong> </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const mainMenu = document.getElementById('main-menu');
+    const albums = document.querySelectorAll('.album');
+    const categoryCards = document.querySelectorAll('.category-card');
+    const backButtons = document.querySelectorAll('.back-button');
+
+    categoryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const albumId = card.getAttribute('data-album');
+        mainMenu.style.display = 'none';
+        albums.forEach(album => {
+          album.classList.remove('active');
+        });
+        document.getElementById(albumId).classList.add('active');
+      });
+    });
+
+    backButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        albums.forEach(album => {
+          album.classList.remove('active');
+        });
+        mainMenu.style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>
